@@ -1,5 +1,8 @@
 # PyScript Test
-
+* Stream 1 for initial exploration
+  * https://www.youtube.com/watch?v=MHkkHSHtkRY&t=342s
+* Stream 2 where we get PyMC working (With direct link to relevant part)
+  * https://www.youtube.com/watch?v=uW6sWe7yO98&t=13548s
 ## How to get things working locally
 1. Clone this repo
   * For some of the demos you'll need the included wheel files
