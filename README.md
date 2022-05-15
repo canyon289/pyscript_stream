@@ -1,4 +1,4 @@
-# PyScript Test
+# PyScript PyMC
 * Stream 1 for initial exploration
   * https://www.youtube.com/watch?v=MHkkHSHtkRY&t=342s
 * Stream 2 where we get PyMC working (With direct link to relevant part)
