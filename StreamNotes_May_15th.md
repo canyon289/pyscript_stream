@@ -91,9 +91,12 @@ Build wheels for all the below and load in as well
 Goal: Get a PPL working in the browser, (Which would be incredible)
 
 
-### Not working
-When I install from pypi I don't get a great exception message
-https://pypi.org/project/pymc/#history
-```
-micropip.install("https://files.pythonhosted.org/packages/00/e7/6db2b1d0bdcbc409bf3135d819082923062776aa7f2fe77b6cfd4cbcaf97/pymc-4.0.0b6-py3-none-any.whl")
+### PyMC Model
+```python
+samples = [0, 0, 0, 1, 1]
+
+with pm.Model():
+  p = pm.Beta("p",1,1)
+  obs = pm.Bernoulli("obs",1,1)
+  inf_data = pm.sample(samples=1000, cores=1)
 ```
