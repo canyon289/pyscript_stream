@@ -2,25 +2,25 @@
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   <body>
-    <div id="packages" style="width: 100%;"></div>
+    <div id="imports" style="width: 100%;"></div>
     <div id="sample_output" style="width: 100%;"></div>
-    <div id="plot_output" style="width: 100%;"></div>
+    <div id="plot_samples" style="width: 100%;"></div>
     <py-repl id="my-repl" auto-generate="true"> </py-repl>
   </body>
 
-  <py-script output="plot_output">
+  <py-script output="imports">
     import aeppl
     import aesara as ae
     import arviz as az
     import numpy as np
-    aeppl.__version__, ae.__version__, az.__version__
+    aeppl.__version__, ae.__version__, az.__version__, pm.__version__
   </py-script>
 
   <py-script output="sample_output">
     samples = np.random.normal(10, 2, size=1000)
   </py-script>
 
-  <py-script output="plot_output">
+  <py-script output="plot_samples">
     fig, ax = plt.subplots()
     arviz.plot_dist(samples, ax=ax)
     fig
