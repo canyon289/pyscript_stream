@@ -1,0 +1,23 @@
+<html>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <body>
+    <div id="sample_output" style="width: 100%;"></div>
+    <py-repl id="my-repl" auto-generate="true"> </py-repl>
+  </body>
+
+  <!-- ArviZ PyPI -->
+  <!-- https://pypi.org/project/arviz/#files -->
+  <py-script output="micropip_install">
+    <!-- do not get a nice exception in console telling me that netcdf4 doesn't have a wheel -->
+
+    micropip.install("https://files.pythonhosted.org/packages/95/c0/dd9b4bf085d974de1c6d5fffea8e25153e8208ece6b363fa3a9263ed7e51/arviz-0.12.1-py3-none-any.whl")
+  </py-script>
+
+
+  <py-env>
+    <!-- This does give me a nice exception with the failure -->
+    - arviz 
+  </py-env>
+
+</html>
