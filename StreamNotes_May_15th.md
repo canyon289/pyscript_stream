@@ -96,7 +96,13 @@ Goal: Get a PPL working in the browser, (Which would be incredible)
 samples = [0, 0, 0, 1, 1]
 
 with pm.Model():
-  p = pm.Beta("p",1,1)
-  obs = pm.Bernoulli("obs",1,1)
-  inf_data = pm.sample(samples=1000, cores=1)
+  p = pm.Beta("p",5,5)
+  obs = pm.Bernoulli("obs",p=p, observed=samples)
+  inf_data = pm.sample(draws=1000, cores=1)
+```
+
+```python
+fig, ax = plt.subplots()
+az.plot_posterior(inf_data, ax=ax)
+fig
 ```
