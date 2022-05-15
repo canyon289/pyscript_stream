@@ -11,7 +11,7 @@
   <py-script output="imports">
     import arviz as az
     import numpy as np
-    from matplotlib import pyplot as plot
+    from matplotlib import pyplot as plt
     az.__version__
   </py-script>
 
@@ -21,7 +21,7 @@
 
   <py-script output="plot_samples">
     fig, ax = plt.subplots()
-    arviz.plot_dist(samples, ax=ax)
+    az.plot_dist(samples, ax=ax)
     fig
   </py-script>
 
